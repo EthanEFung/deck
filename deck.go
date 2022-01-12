@@ -1,10 +1,8 @@
-package main
+package deck
 
 import (
-	"fmt"
 	"math/rand"
 	"sort"
-	"time"
 )
 
 /*
@@ -119,18 +117,18 @@ func multiply(deck []Card, n int) []Card {
 	return deck
 }
 
-func main() {
-	deck := New(NewOptions{
-		// Sort: func(deck []Card, i, j int) bool {
-		// return deck[i].Rank > deck[j].Rank && deck[i].Suit > deck[j].Suit
-		// },
-		Filter: func(deck []Card, i int) bool {
-			return deck[i].Type == Face
-		},
-		Decks:   1,
-		Jokers:  2,
-		Shuffle: 1,
-		Seed:    time.Now().UnixNano(),
-	})
-	fmt.Println(deck)
-}
+// func main() {
+// 	deck := New(NewOptions{
+// 		// Sort: func(deck []Card, i, j int) bool {
+// 		// return deck[i].Rank > deck[j].Rank && deck[i].Suit > deck[j].Suit
+// 		// },
+// 		Filter: func(deck []Card, i int) bool {
+// 			return deck[i].Type == Face
+// 		},
+// 		Decks:   1,
+// 		Jokers:  2,
+// 		Shuffle: 1,
+// 		Seed:    time.Now().UnixNano(),
+// 	})
+// 	fmt.Println(deck)
+// }
